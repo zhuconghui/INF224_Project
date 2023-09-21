@@ -17,7 +17,7 @@ std::string Multimedia::getName() const { return this->name; }
 
 std::string Multimedia::getFileName() const { return this->fileName; }
 
-void Multimedia::displayVar(std::ostream &s) {
+void Multimedia::displayInfo(std::ostream &s) {
     s << "Name of multimedia : " << this->getName() << std::endl;
     s << "Filename : " << this->getFileName() << std::endl;
     s << "----------------------------------------" << std::endl;

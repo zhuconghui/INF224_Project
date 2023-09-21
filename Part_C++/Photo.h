@@ -11,18 +11,36 @@ class Photo : public Multimedia {
     double longitude{};
 
    public:
-    Photo();
+    Photo(){};
     Photo(std::string name, std::string fileName, double latitude,
-          double longitude);
+          double longitude) {
+        this->name = name;
+        this->fileName = fileName;
+        this->latitude = latitude;
+        this->longitude = longitude;
+    };
 
-    void setLatitude(double latitude);
-    void setLongitude(double longitude);
+    void setLatitude(double latitude) { this->latitude = latitude; };
+    void setLongitude(double longitude) { this->longitude = longitude; };
 
-    double getLatitude();
-    double getLongitude();
+    double getLatitude() { return this->latitude; };
+    double getLongitude() { return this->longitude; };
 
-    void displayVar(std::ostream &s) override;
-    void display() override;
+    void displayInfo(std::ostream &s) override {
+        s << "Name of photo : " << this->getName() << std::endl;
+        s << "Filename : " << this->getFileName() << std::endl;
+        s << "Latitude = " << this->getLatitude() << std::endl;
+        s << "Longitude = " << this->getLongitude() << std::endl;
+        s << "----------------------------------------" << std::endl;
+    };
+    void display() override {
+        std::string str{};
+
+        str = "imagej " + this->fileName + " &";
+
+        // std::cout << str.data() << std::endl;
+        system(str.data());
+    };
 };
 
 #endif

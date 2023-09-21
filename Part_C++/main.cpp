@@ -8,29 +8,26 @@ using namespace std;
 
 int main(int argc, const char *argv[]) {
     /* Test for class de base Multimedia */
-    Multimedia *movie = new Multimedia();
+    Multimedia *movie = new Multimedia("a", "b");
 
-    movie->setName("Amelie a Paris");
-    movie->setFileName("USA");
-
-    movie->displayVar(std::cout);
+    movie->displayInfo(std::cout);
 
     /* Test for class Photo */
-    Photo *pic = new Photo(
-        "C++ Logo",
-        "/home/zhuconghui/Documents/INF224/TP/Part_C++/test_files/C++_Logo.png",
-        20, 15);
+    Photo *pic = new Photo("C++ Logo",
+                           "/home/zhuconghui/Documents/INF224/INF224_Project/"
+                           "Part_C++/test_files/C++_Logo.png",
+                           20, 15);
 
-    pic->displayVar(std::cout);
+    pic->displayInfo(std::cout);
     pic->display();
 
     /* Test for class Video */
     Video *video = new Video("test_video",
-                             "/home/zhuconghui/Documents/INF224/TP/Part_C++/"
-                             "test_files/test_video.mp4",
+                             "/home/zhuconghui/Documents/INF224/INF224_Project/"
+                             "Part_C++/test_files/test_video.mp4",
                              50);
 
-    video->displayVar(std::cout);
+    video->displayInfo(std::cout);
     video->display();
 
     return 0;

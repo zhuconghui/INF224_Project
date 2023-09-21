@@ -19,7 +19,7 @@ class Multimedia {
     std::string getName() const;
     std::string getFileName() const;
 
-    virtual void displayVar(std::ostream &s);
+    virtual void displayInfo(std::ostream &s);
     virtual void display();
 
     ~Multimedia();
