@@ -6,7 +6,7 @@
 #include "Multimedia.h"
 
 class Photo : public Multimedia {
-   private:
+   protected:
     double latitude{};
     double longitude{};
 
@@ -20,20 +20,20 @@ class Photo : public Multimedia {
         this->longitude = longitude;
     };
 
-    void setLatitude(double latitude) { this->latitude = latitude; };
-    void setLongitude(double longitude) { this->longitude = longitude; };
+    inline void setLatitude(double latitude) { this->latitude = latitude; };
+    inline void setLongitude(double longitude) { this->longitude = longitude; };
 
-    double getLatitude() { return this->latitude; };
-    double getLongitude() { return this->longitude; };
+    inline double getLatitude() const { return this->latitude; };
+    inline double getLongitude() const { return this->longitude; };
 
-    void displayInfo(std::ostream &s) override {
+    void displayInfo(std::ostream &s) const override {
         s << "Name of photo : " << this->getName() << std::endl;
         s << "Filename : " << this->getFileName() << std::endl;
         s << "Latitude = " << this->getLatitude() << std::endl;
         s << "Longitude = " << this->getLongitude() << std::endl;
         s << "----------------------------------------" << std::endl;
     };
-    void display() override {
+    void display() const override {
         std::string str{};
 
         str = "imagej " + this->fileName + " &";
