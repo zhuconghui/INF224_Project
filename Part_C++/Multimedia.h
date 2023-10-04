@@ -4,25 +4,28 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
+
 class Multimedia {
    protected:
-    std::string name{};
-    std::string fileName{};
+    string name{};
+    string fileName{};
 
    public:
     Multimedia();
-    Multimedia(std::string name, std::string fileName);
+    Multimedia(string name, string fileName);
 
-    void setName(std::string name);
-    void setFileName(std::string fileName);
+    void setName(string name);
+    void setFileName(string fileName);
 
-    std::string getName() const;
-    std::string getFileName() const;
+    string getName() const;
+    string getFileName() const;
 
-    virtual void displayInfo(std::ostream &s) const  = 0;
+    virtual void displayInfo(ostream &s) const  = 0;
     virtual void display() const = 0;
 
-    ~Multimedia();
+    virtual ~Multimedia();
 };
 
 #endif

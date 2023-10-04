@@ -5,6 +5,9 @@
 
 #include "Video.h"
 
+using namespace std;
+
+
 class Film : public Video {
    protected:
     unsigned int nbChapter{};
@@ -12,7 +15,7 @@ class Film : public Video {
 
    public:
     Film(){};
-    Film(std::string name, std::string fileName, unsigned int length,
+    Film(string name, string fileName, unsigned int length,
          unsigned int nbChapter, unsigned int *lengthOfChapters) {
         this->name = name;
         this->fileName = fileName;
@@ -20,6 +23,11 @@ class Film : public Video {
         this->nbChapter = nbChapter;
         this->lengthOfChapters = lengthOfChapters;
     };
+
+    ~Film() override{
+        delete []lengthOfChapters;
+        cout << "Film " << this->getName() << " is destroyed" << endl; 
+    }
 
     inline void setNbChapter(unsigned int nbChapter) {
         this->nbChapter = nbChapter;
@@ -35,23 +43,23 @@ class Film : public Video {
         return this->lengthOfChapters;
     };
 
-    void displayInfo(std::ostream &s) const override {
-        s << "Name of film : " << this->getName() << std::endl;
-        s << "Filename : " << this->getFileName() << std::endl;
-        s << "Length = " << this->getLength() << std::endl;
-        s << "Number of chapter = " << this->getNbChapter() << std::endl;        
+    void displayInfo(ostream &s) const override {
+        s << "Name of film : " << this->getName() << endl;
+        s << "Filename : " << this->getFileName() << endl;
+        s << "Length = " << this->getLength() << endl;
+        s << "Number of chapter = " << this->getNbChapter() << endl;        
         for (unsigned int i = 0; i < getNbChapter(); i++) {
             s << "Length of chapter " << i << " = " << this->getLengthOfChapters()[i]
-              << std::endl;
+              << endl;
         }
-        s << "----------------------------------------" << std::endl;
+        s << "----------------------------------------" << endl;
     };
     void display() const override {
-        std::string str{};
+        string str{};
 
         str = "mpv " + this->fileName + " &";
 
-        // std::cout << str.data() << std::endl;
+        // cout << str.data() << endl;
         system(str.data());
     };
 };

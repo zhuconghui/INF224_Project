@@ -1,0 +1,12 @@
+Q4. Comment appelle-t'on ce type de méthode et comment faut-il les déclarer ?
+    Methode virtual. On declare dans la classe de base le methode display en virtual 
+    et on aujoute '= 0' a la fin pour que ca soit une methode virtual pure qui signifie que 
+    cette methode ne peut pas etre implemente dans la classe de base et on doit faire override 
+    dans les classe qui l'heritent.
+
+Q5. Quelle est la propriété caractéristique de l'orienté objet qui permet de faire cela ?
+    Polymorphisme.
+
+    Qu'est-il spécifiquement nécessaire de faire dans le cas du C++ ?
+
+    Quel est le type des éléments du tableau : le tableau doit-il contenir des objets ou des pointeurs vers ces objets ? Pourquoi ? Comparer à Java.

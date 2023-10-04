@@ -5,6 +5,9 @@
 
 #include "Multimedia.h"
 
+using namespace std;
+
+
 class Photo : public Multimedia {
    protected:
     double latitude{};
@@ -12,7 +15,7 @@ class Photo : public Multimedia {
 
    public:
     Photo(){};
-    Photo(std::string name, std::string fileName, double latitude,
+    Photo(string name, string fileName, double latitude,
           double longitude) {
         this->name = name;
         this->fileName = fileName;
@@ -20,25 +23,29 @@ class Photo : public Multimedia {
         this->longitude = longitude;
     };
 
+    ~Photo() override {
+        cout << "Photo " << this->getName() << " is destroyed" << endl;
+    }
+
     inline void setLatitude(double latitude) { this->latitude = latitude; };
     inline void setLongitude(double longitude) { this->longitude = longitude; };
 
     inline double getLatitude() const { return this->latitude; };
     inline double getLongitude() const { return this->longitude; };
 
-    void displayInfo(std::ostream &s) const override {
-        s << "Name of photo : " << this->getName() << std::endl;
-        s << "Filename : " << this->getFileName() << std::endl;
-        s << "Latitude = " << this->getLatitude() << std::endl;
-        s << "Longitude = " << this->getLongitude() << std::endl;
-        s << "----------------------------------------" << std::endl;
+    void displayInfo(ostream &s) const override {
+        s << "Name of photo : " << this->getName() << endl;
+        s << "Filename : " << this->getFileName() << endl;
+        s << "Latitude = " << this->getLatitude() << endl;
+        s << "Longitude = " << this->getLongitude() << endl;
+        s << "----------------------------------------" << endl;
     };
     void display() const override {
-        std::string str{};
+        string str{};
 
         str = "imagej " + this->fileName + " &";
 
-        // std::cout << str.data() << std::endl;
+        // cout << str.data() << endl;
         system(str.data());
     };
 };

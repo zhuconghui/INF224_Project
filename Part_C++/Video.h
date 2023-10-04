@@ -5,34 +5,42 @@
 
 #include "Multimedia.h"
 
+using namespace std;
+
 class Video : public Multimedia {
    protected:
     unsigned int length{};
 
    public:
     Video(){};
-    Video(std::string name, std::string fileName, unsigned int length) {
+
+    Video(string name, string fileName, unsigned int length) {
         this->name = name;
         this->fileName = fileName;
         this->length = length;
     };
 
+    ~Video() override{
+        cout << "Video " << this->getName() << " is destroyed" << endl;
+    }
+
     inline void setLength(unsigned int length) { this->length = length; };
 
     inline double getLength() const { return this->length; };
 
-    void displayInfo(std::ostream &s) const override {
-        s << "Name of video : " << this->getName() << std::endl;
-        s << "Filename : " << this->getFileName() << std::endl;
-        s << "Length = " << this->getLength() << std::endl;
-        s << "----------------------------------------" << std::endl;
+    void displayInfo(ostream &s) const override {
+        s << "Name of video : " << this->getName() << endl;
+        s << "Filename : " << this->getFileName() << endl;
+        s << "Length = " << this->getLength() << endl;
+        s << "----------------------------------------" << endl;
     };
+
     void display() const override {
-        std::string str{};
+        string str{};
 
         str = "mpv " + this->fileName + " &";
 
-        // std::cout << str.data() << std::endl;
+        // cout << str.data() << endl;
         system(str.data());
     };
 };
