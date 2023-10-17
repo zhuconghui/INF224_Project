@@ -7,18 +7,16 @@
 
 using namespace std;
 
-
 class Photo : public Multimedia {
-   protected:
+   private:
     double latitude{};
     double longitude{};
 
    public:
     Photo(){};
-    Photo(string name, string fileName, double latitude,
-          double longitude) {
-        this->name = name;
-        this->fileName = fileName;
+    Photo(string name, string fileName, double latitude, double longitude) {
+        this->setName(name);
+        this->setFileName(fileName);
         this->latitude = latitude;
         this->longitude = longitude;
     };
@@ -40,10 +38,10 @@ class Photo : public Multimedia {
         s << "Longitude = " << this->getLongitude() << endl;
         s << "----------------------------------------" << endl;
     };
-    void display() const override {
+    void play() const override {
         string str{};
 
-        str = "imagej " + this->fileName + " &";
+        str = "imagej " + this->getFileName() + " &";
 
         // cout << str.data() << endl;
         system(str.data());

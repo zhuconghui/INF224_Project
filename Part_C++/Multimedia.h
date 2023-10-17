@@ -6,9 +6,8 @@
 
 using namespace std;
 
-
 class Multimedia {
-   protected:
+   private:
     string name{};
     string fileName{};
 
@@ -22,8 +21,8 @@ class Multimedia {
     string getName() const;
     string getFileName() const;
 
-    virtual void displayInfo(ostream &s) const  = 0;
-    virtual void display() const = 0;
+    virtual void displayInfo(ostream &s) const = 0;
+    virtual void play() const = 0;
 
     virtual ~Multimedia();
 };

@@ -7,9 +7,8 @@
 
 using namespace std;
 
-
 class Film : public Video {
-   protected:
+   private:
     unsigned int nbChapter{};
     unsigned int *lengthOfChapters = nullptr;
 
@@ -17,16 +16,16 @@ class Film : public Video {
     Film(){};
     Film(string name, string fileName, unsigned int length,
          unsigned int nbChapter, unsigned int *lengthOfChapters) {
-        this->name = name;
-        this->fileName = fileName;
-        this->length = length;
+        this->setName(name);
+        this->setFileName(fileName);
+        this->setLength(length);
         this->nbChapter = nbChapter;
         this->lengthOfChapters = lengthOfChapters;
     };
 
-    ~Film() override{
-        delete []lengthOfChapters;
-        cout << "Film " << this->getName() << " is destroyed" << endl; 
+    ~Film() override {
+        delete[] lengthOfChapters;
+        cout << "Film " << this->getName() << " is destroyed" << endl;
     }
 
     inline void setNbChapter(unsigned int nbChapter) {
@@ -47,17 +46,17 @@ class Film : public Video {
         s << "Name of film : " << this->getName() << endl;
         s << "Filename : " << this->getFileName() << endl;
         s << "Length = " << this->getLength() << endl;
-        s << "Number of chapter = " << this->getNbChapter() << endl;        
+        s << "Number of chapter = " << this->getNbChapter() << endl;
         for (unsigned int i = 0; i < getNbChapter(); i++) {
-            s << "Length of chapter " << i << " = " << this->getLengthOfChapters()[i]
-              << endl;
+            s << "Length of chapter " << i << " = "
+              << this->getLengthOfChapters()[i] << endl;
         }
         s << "----------------------------------------" << endl;
     };
-    void display() const override {
+    void play() const override {
         string str{};
 
-        str = "mpv " + this->fileName + " &";
+        str = "mpv " + this->getFileName() + " &";
 
         // cout << str.data() << endl;
         system(str.data());

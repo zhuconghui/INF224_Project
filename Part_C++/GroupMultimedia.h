@@ -1,8 +1,8 @@
 #ifndef GROUPMULTIMEDIA_H
 #define GROUPMULTIMEDIA_H
 
-#include <list>
 #include <iostream>
+#include <list>
 #include <memory>
 
 #include "Multimedia.h"
@@ -10,31 +10,27 @@
 using namespace std;
 
 class GroupMultimedia : public list<shared_ptr<Multimedia>> {
-    protected:
-        string groupName{};
+   private:
+    string groupName{};
 
-    public:
-        GroupMultimedia(){};
+   public:
+    GroupMultimedia(){};
 
-        GroupMultimedia(string groupName){
-            this->groupName = groupName;
-        }
+    GroupMultimedia(string groupName) { this->groupName = groupName; }
 
-        ~GroupMultimedia(){
-            cout << "GroupMultimedia " << this->getGroupName() << " is destroyed" << endl;
-        }
+    ~GroupMultimedia() {
+        cout << "GroupMultimedia " << this->getGroupName() << " is destroyed"
+             << endl;
+    }
 
-        string getGroupName () const { return this->groupName; };
+    string getGroupName() const { return this->groupName; };
 
-        void setGroupName(string groupName) {
-            this->groupName = groupName;
-        }
+    void setGroupName(string groupName) { this->groupName = groupName; }
 
-        void displayAllObjects(ostream &s) const {
-            /* '&' is optionnal, more faster if '&' added*/
-            for(auto & it : *this) it->displayInfo(s); 
-        }
-        
+    void displayAllObjects(ostream &s) const {
+        /* '&' is optionnal, more faster if '&' added*/
+        for (auto &it : *this) it->displayInfo(s);
+    }
 };
 
-#endif 
+#endif

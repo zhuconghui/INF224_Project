@@ -8,19 +8,19 @@
 using namespace std;
 
 class Video : public Multimedia {
-   protected:
+   private:
     unsigned int length{};
 
    public:
     Video(){};
 
     Video(string name, string fileName, unsigned int length) {
-        this->name = name;
-        this->fileName = fileName;
+        this->setName(name);
+        this->setFileName(fileName);
         this->length = length;
     };
 
-    ~Video() override{
+    ~Video() override {
         cout << "Video " << this->getName() << " is destroyed" << endl;
     }
 
@@ -35,10 +35,10 @@ class Video : public Multimedia {
         s << "----------------------------------------" << endl;
     };
 
-    void display() const override {
+    void play() const override {
         string str{};
 
-        str = "mpv " + this->fileName + " &";
+        str = "mpv " + this->getFileName() + " &";
 
         // cout << str.data() << endl;
         system(str.data());
