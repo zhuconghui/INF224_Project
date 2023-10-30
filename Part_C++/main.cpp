@@ -95,7 +95,6 @@ int main(int argc, const char *argv[]) {
     manager->playMultimedia("C++ Logo");
     manager->playMultimedia("test_video");
 
-    
     return 0;
 }
 #endif
