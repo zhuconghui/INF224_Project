@@ -49,7 +49,8 @@ public class MainPanel extends JPanel {
                         "exit : exit program \n\n\n" +
                         "Multimedia in the library: \n" +
                         "C++_Logo\n" +
-                        "test_video\n\n\n" +
+                        "test_video\n" +
+                        "test_film\n\n\n" +
                         "Group Multimedia name: groupMultimedia\n" +
                         "For exmaple, to play test_video\n" +
                         "just enter \"play test_video\" in request field and click send button.\n\n\n" +   

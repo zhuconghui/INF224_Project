@@ -1,0 +1,97 @@
+\hypertarget{classMainFrame}{}\doxysection{Main\+Frame Class Reference}
+\label{classMainFrame}\index{MainFrame@{MainFrame}}
+
+
+The main window frame of the application, managing the GUI components and client interactions.  
+
+
+
+
+Inheritance diagram for Main\+Frame\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classMainFrame__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+Frame\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classMainFrame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainFrame_ae00696c7a868e063b6522e04703845ed}{Main\+Frame}} ()
+\item 
+\mbox{\hyperlink{classClient}{Client}} \mbox{\hyperlink{classMainFrame_a21931513e2c714dc2a8cae9021e787db}{get\+Client}} ()
+\item 
+void \mbox{\hyperlink{classMainFrame_a70de917e0fa05ff6e83992b78ecab259}{set\+Request}} (String request)
+\item 
+void \mbox{\hyperlink{classMainFrame_abd9795c026b47a828fc6ed9756247bf9}{set\+Send\+Clicked}} (int send\+Clicked)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main window frame of the application, managing the GUI components and client interactions. 
+
+\mbox{\hyperlink{classMainFrame}{Main\+Frame}} extends JFrame and is the primary window for the application. It contains the main panel, menu bar, and handles the client-\/server communication. It is responsible for initializing the GUI components and managing the lifecycle of the application. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMainFrame_ae00696c7a868e063b6522e04703845ed}\label{classMainFrame_ae00696c7a868e063b6522e04703845ed}} 
+\index{MainFrame@{MainFrame}!MainFrame@{MainFrame}}
+\index{MainFrame@{MainFrame}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{MainFrame()}{MainFrame()}}
+{\footnotesize\ttfamily Main\+Frame.\+Main\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for \mbox{\hyperlink{classMainFrame}{Main\+Frame}} which sets up the GUI components and client connection. It initializes the main panel, menu bar, and sets up the frame properties. Also, it establishes the client connection and manages the main application loop. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMainFrame_a21931513e2c714dc2a8cae9021e787db}\label{classMainFrame_a21931513e2c714dc2a8cae9021e787db}} 
+\index{MainFrame@{MainFrame}!getClient@{getClient}}
+\index{getClient@{getClient}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{getClient()}{getClient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classClient}{Client}} Main\+Frame.\+get\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the \mbox{\hyperlink{classClient}{Client}} instance used for server communication.
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classClient}{Client}} object used in this frame. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMainFrame_a70de917e0fa05ff6e83992b78ecab259}\label{classMainFrame_a70de917e0fa05ff6e83992b78ecab259}} 
+\index{MainFrame@{MainFrame}!setRequest@{setRequest}}
+\index{setRequest@{setRequest}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{setRequest()}{setRequest()}}
+{\footnotesize\ttfamily void Main\+Frame.\+set\+Request (\begin{DoxyParamCaption}\item[{String}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the request string to be sent to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request string. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMainFrame_abd9795c026b47a828fc6ed9756247bf9}\label{classMainFrame_abd9795c026b47a828fc6ed9756247bf9}} 
+\index{MainFrame@{MainFrame}!setSendClicked@{setSendClicked}}
+\index{setSendClicked@{setSendClicked}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{setSendClicked()}{setSendClicked()}}
+{\footnotesize\ttfamily void Main\+Frame.\+set\+Send\+Clicked (\begin{DoxyParamCaption}\item[{int}]{send\+Clicked }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the state of the send\+Clicked flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em send\+Clicked} & The state to set for send\+Clicked. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Main\+Frame.\+java\end{DoxyCompactItemize}

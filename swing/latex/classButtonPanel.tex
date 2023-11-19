@@ -1,0 +1,78 @@
+\hypertarget{classButtonPanel}{}\doxysection{Button\+Panel Class Reference}
+\label{classButtonPanel}\index{ButtonPanel@{ButtonPanel}}
+
+
+This class creates and manages a set of buttons for interaction with \mbox{\hyperlink{classMainPanel}{Main\+Panel}}.  
+
+
+
+
+Inheritance diagram for Button\+Panel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classButtonPanel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Button\+Panel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classButtonPanel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classButtonPanel_a06c9b213432293445e36e0dd027e0a3d}{Button\+Panel}} (\mbox{\hyperlink{classMainPanel}{Main\+Panel}} main\+Panel)
+\item 
+void \mbox{\hyperlink{classButtonPanel_a06b6c6cd0d69be4e84a2f7336c611653}{action\+Performed}} (Action\+Event e)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class creates and manages a set of buttons for interaction with \mbox{\hyperlink{classMainPanel}{Main\+Panel}}. 
+
+\mbox{\hyperlink{classButtonPanel}{Button\+Panel}} is an extension of JPanel that contains a series of buttons for performing various actions such as play, search, send requests, and exit the application. This panel relies on an instance of \mbox{\hyperlink{classMainPanel}{Main\+Panel}} to interact with other parts of the application. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classButtonPanel_a06c9b213432293445e36e0dd027e0a3d}\label{classButtonPanel_a06c9b213432293445e36e0dd027e0a3d}} 
+\index{ButtonPanel@{ButtonPanel}!ButtonPanel@{ButtonPanel}}
+\index{ButtonPanel@{ButtonPanel}!ButtonPanel@{ButtonPanel}}
+\doxysubsubsection{\texorpdfstring{ButtonPanel()}{ButtonPanel()}}
+{\footnotesize\ttfamily Button\+Panel.\+Button\+Panel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMainPanel}{Main\+Panel}}}]{main\+Panel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor initializes the \mbox{\hyperlink{classButtonPanel}{Button\+Panel}}, setting up its layout and functionalities.
+
+
+\begin{DoxyParams}{Parameters}
+{\em main\+Panel} & A reference to \mbox{\hyperlink{classMainPanel}{Main\+Panel}}, used to interact with it when button events are triggered. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classButtonPanel_a06b6c6cd0d69be4e84a2f7336c611653}\label{classButtonPanel_a06b6c6cd0d69be4e84a2f7336c611653}} 
+\index{ButtonPanel@{ButtonPanel}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!ButtonPanel@{ButtonPanel}}
+\doxysubsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
+{\footnotesize\ttfamily void Button\+Panel.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Handles action events triggered by the buttons in this panel.
+
+Depending on which button is pressed, different actions are performed. These actions include setting text in the request field of the main panel, sending a request to the main frame, and exiting the application.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The Action\+Event triggered by button interactions. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Button\+Panel.\+java\end{DoxyCompactItemize}
