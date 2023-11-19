@@ -14,19 +14,32 @@ public class TextAreaPanel extends JScrollPane {
         super();
         textArea = new JTextArea();
         this.setViewportView(textArea);
+        textArea.setEditable(false);
     }
 
     /**
      * Appends "Hello!" to the text area.
      */
-    public void addText1() {
-        textArea.append("Hello!\n");
+    public void addTextPlay() {
+        textArea.append("Play ");
     }
 
     /**
      * Appends "Bonjour!" to the text area.
      */
-    public void addText2() {
-        textArea.append("Bonjour!\n");
+    public void addTextSearchObj() {
+        textArea.append("SearchObj ");
+    }
+
+    public void addTextSearchGrp() {
+        textArea.append("SearchGrp ");
+    }
+
+    public void addText(String text) {
+        textArea.append(text + "\n");
+    }
+
+    public String getText(){
+        return textArea.getText();
     }
 }

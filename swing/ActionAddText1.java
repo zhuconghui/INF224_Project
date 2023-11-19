@@ -24,6 +24,6 @@ public class ActionAddText1 extends AbstractAction {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-        textAreaPanel.addText1();
+        textAreaPanel.addTextPlay();
     }
 }

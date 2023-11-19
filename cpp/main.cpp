@@ -14,13 +14,18 @@ using namespace std;
 
 #ifdef VERSION_1
 
+/**
+ * Main function for VERSION_1.
+ * Contains tests and demonstrations for various functionalities of the multimedia classes.
+ */
+
 int main(int argc, const char *argv[]) {
-    // /* Test for class de base Multimedia */
+    /* Test for class de base Multimedia */
     // Multimedia *movie = new Multimedia("a", "b");
 
     // movie->displayInfo(cout);
 
-    // /* Test for class Photo */
+    /* Test for class Photo */
     // unique_ptr<Photo> pic(new Photo("C++ Logo", "test_files/C++_Logo.png",
     // 20, 15));
 
@@ -81,19 +86,19 @@ int main(int argc, const char *argv[]) {
     // delete group2;
 
     /* Test for Q10 */
-    MultimediaManager *manager = new MultimediaManager();
-    shared_ptr<Multimedia> photo(manager->createPhoto("C++ Logo", "test_files/C++_Logo.png", 20, 15));
-    shared_ptr<Multimedia> video(manager->createVideo("test_video", "test_files/test_video.mp4", 50));
-    shared_ptr<GroupMultimedia> groupMultimedia(manager->createGroupMultimedia("groupMultimedia"));
+    // MultimediaManager *manager = new MultimediaManager();
+    // shared_ptr<Multimedia> photo(manager->createPhoto("C++ Logo", "test_files/C++_Logo.png", 20, 15));
+    // shared_ptr<Multimedia> video(manager->createVideo("test_video", "test_files/test_video.mp4", 50));
+    // shared_ptr<GroupMultimedia> groupMultimedia(manager->createGroupMultimedia("groupMultimedia"));
 
-    groupMultimedia->push_back(photo);
-    groupMultimedia->push_back(video);
+    // groupMultimedia->push_back(photo);
+    // groupMultimedia->push_back(video);
 
-    manager->displayMultimedia("C++ Logo", cout);
-    manager->displayMultimedia("test_video", cout);
-    manager->displayGroupMultimedia("groupMultimedia", cout);
-    manager->playMultimedia("C++ Logo");
-    manager->playMultimedia("test_video");
+    // manager->displayMultimedia("C++ Logo", cout);
+    // manager->displayMultimedia("test_video", cout);
+    // manager->displayGroupMultimedia("groupMultimedia", cout);
+    // manager->playMultimedia("C++ Logo");
+    // manager->playMultimedia("test_video");
 
     return 0;
 }
@@ -107,14 +112,26 @@ int main(int argc, const char *argv[]) {
 
 const int PORT = 3331;
 
+/**
+ * Enumeration of available commands for server interaction.
+ */
 enum command {play, searchObj, searchGrp, noSuchCommand};
 
+/**
+ * Map to associate string commands with their corresponding enum values.
+ */
 map<string, command> tableCommand {
     {"play", play},
     {"searchObj", searchObj},
     {"searchGrp", searchGrp}
 };
 
+/**
+ * Helper function to convert string to command enum.
+ * 
+ * @param command The command as a string.
+ * @return The corresponding command enum, or noSuchCommand if not found.
+ */
 command getCommand(string command){
     auto it = tableCommand.find(command);
     if(it != tableCommand.end()) {
@@ -125,45 +142,64 @@ command getCommand(string command){
     }
 }
 
+/**
+ * Main function for VERSION_2.
+ * Sets up a MultimediaManager and a TCPServer to handle multimedia requests.
+ */
 int main() {
     MultimediaManager *manager = new MultimediaManager();
     shared_ptr<Multimedia> photo(manager->createPhoto("C++_Logo", "test_files/C++_Logo.png", 20, 15));
     shared_ptr<Multimedia> video(manager->createVideo("test_video", "test_files/test_video.mp4", 50));
     shared_ptr<GroupMultimedia> groupMultimedia(manager->createGroupMultimedia("groupMultimedia"));
-
     groupMultimedia->push_back(photo);
     groupMultimedia->push_back(video);
 
+    // groupMultimedia->displayAllObjects(cout);
     auto* server = new TCPServer([&](string const& request, string& response) {
         string action{};
         string name{};
-        stringstream ss(request);
-        ss >> action; // get the action
+        istringstream iss(request);
+        iss >> action; // get the action
+
+        stringstream res_stream = stringstream();
 
         switch (getCommand(action))
         {
         case play:
-            ss >> name;
-            manager->playMultimedia(name);     
-            response = "The request received is play " + name;
+            iss >> name;
+            res_stream.str("");
+            res_stream.clear();
+            manager->playMultimedia(name);  
+            res_stream << name << " is playing...\n";   
+            response = res_stream.str();
             break;
         
         case searchObj:
-            ss >> name;
-            manager->displayMultimedia(name, cout);
-            response = "The request received is search mutimedia object " + name;
+            iss >> name;
+            res_stream.str("");
+            res_stream.clear();
+            manager->displayMultimedia(name, res_stream);
+            // response = "The request received is search mutimedia object " + name;
+            response = res_stream.str();
+            cout << response << endl;
             break;
 
         case searchGrp:
-            ss >> name;
-            manager->displayGroupMultimedia(name, cout);
-            response = "The request received is search mutimedia group " + name;
+            iss >> name;
+            res_stream.str("");
+            res_stream.clear();
+            manager->displayGroupMultimedia(name, res_stream);
+            // response = "The request received is search mutimedia group " + name;
+            response = res_stream.str();
+            cout << response << endl;
             break;
 
         case noSuchCommand:
             response = "The request is illegal";
             break;
+    
         }
+
 
         return true;
     });

@@ -24,6 +24,6 @@ public class ActionAddText2 extends AbstractAction {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-        textAreaPanel.addText2();
+        textAreaPanel.addTextSearchObj();
     }
 }

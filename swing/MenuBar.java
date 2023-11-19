@@ -7,6 +7,7 @@ import javax.swing.*;
 public class MenuBar extends JMenuBar {
     private final JMenu menuFile;
     private final JToolBar toolBar;
+    
     private final TextAreaPanel textAreaPanel;
 
     /**
