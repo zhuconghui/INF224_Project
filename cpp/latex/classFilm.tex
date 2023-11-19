@@ -1,0 +1,180 @@
+\hypertarget{classFilm}{}\doxysection{Film Class Reference}
+\label{classFilm}\index{Film@{Film}}
+
+
+The \mbox{\hyperlink{classFilm}{Film}} class extends the \mbox{\hyperlink{classVideo}{Video}} class with specific attributes for films.  
+
+
+
+
+{\ttfamily \#include $<$Film.\+h$>$}
+
+
+
+Inheritance diagram for Film\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classFilm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Film\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classFilm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFilm_af2835db2b0ef3a87aaa3222f4d9d1ae3}{Film}} ()
+\item 
+\mbox{\hyperlink{classFilm_a6c5c035cdca9842bf2479e04255babad}{Film}} (string name, string file\+Name, unsigned int length, unsigned int nb\+Chapter, unsigned int $\ast$length\+Of\+Chapters)
+\item 
+\mbox{\hyperlink{classFilm_af6bfc1299bce347dfc6e336b8ccec3f1}{$\sim$\+Film}} () override
+\item 
+void \mbox{\hyperlink{classFilm_aecd2032cf554c6cfaf0b6b562805f27d}{set\+Nb\+Chapter}} (unsigned int nb\+Chapter)
+\item 
+void \mbox{\hyperlink{classFilm_a4e8e856c22fedf76a3b9fdb7ebe994a6}{set\+Length\+Of\+Chapters}} (unsigned int $\ast$length\+Of\+Chapters)
+\item 
+double \mbox{\hyperlink{classFilm_a829b137c16e276ad9f6753fdf38cfbdb}{get\+Nb\+Chapter}} () const
+\item 
+unsigned int $\ast$ \mbox{\hyperlink{classFilm_a2d76d06375850cc1213ea6c1831024ac}{get\+Length\+Of\+Chapters}} () const
+\item 
+void \mbox{\hyperlink{classFilm_a1de74cbaec547db4bcf720ee5e1d2659}{display\+Info}} (ostream \&s) const override
+\item 
+void \mbox{\hyperlink{classFilm_a8f411127364bee4eccd01a4de73ba9a0}{play}} () const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classFilm}{Film}} class extends the \mbox{\hyperlink{classVideo}{Video}} class with specific attributes for films. 
+
+This class represents a film with attributes like the number of chapters and their respective lengths. It provides functionalities to set and get these attributes, display film information, and play the film. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFilm_af2835db2b0ef3a87aaa3222f4d9d1ae3}\label{classFilm_af2835db2b0ef3a87aaa3222f4d9d1ae3}} 
+\index{Film@{Film}!Film@{Film}}
+\index{Film@{Film}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{Film()}{Film()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Film\+::\+Film (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor for \mbox{\hyperlink{classFilm}{Film}}. \mbox{\Hypertarget{classFilm_a6c5c035cdca9842bf2479e04255babad}\label{classFilm_a6c5c035cdca9842bf2479e04255babad}} 
+\index{Film@{Film}!Film@{Film}}
+\index{Film@{Film}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{Film()}{Film()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Film\+::\+Film (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{file\+Name,  }\item[{unsigned int}]{length,  }\item[{unsigned int}]{nb\+Chapter,  }\item[{unsigned int $\ast$}]{length\+Of\+Chapters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Parameterized constructor for \mbox{\hyperlink{classFilm}{Film}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the film. \\
+\hline
+{\em file\+Name} & The file name of the film. \\
+\hline
+{\em length} & The total length of the film. \\
+\hline
+{\em nb\+Chapter} & The number of chapters in the film. \\
+\hline
+{\em length\+Of\+Chapters} & A pointer to an array containing the length of each chapter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFilm_af6bfc1299bce347dfc6e336b8ccec3f1}\label{classFilm_af6bfc1299bce347dfc6e336b8ccec3f1}} 
+\index{Film@{Film}!````~Film@{$\sim$Film}}
+\index{````~Film@{$\sim$Film}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{$\sim$Film()}{~Film()}}
+{\footnotesize\ttfamily Film\+::$\sim$\+Film (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Destructor for \mbox{\hyperlink{classFilm}{Film}}.
+
+Frees the memory allocated for length\+Of\+Chapters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFilm_a1de74cbaec547db4bcf720ee5e1d2659}\label{classFilm_a1de74cbaec547db4bcf720ee5e1d2659}} 
+\index{Film@{Film}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily void Film\+::display\+Info (\begin{DoxyParamCaption}\item[{ostream \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Displays information about the film.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The output stream to which the information is written. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMultimedia_a2971d926f1d7e13f4e04798987b26cf6}{Multimedia}}.
+
+\mbox{\Hypertarget{classFilm_a2d76d06375850cc1213ea6c1831024ac}\label{classFilm_a2d76d06375850cc1213ea6c1831024ac}} 
+\index{Film@{Film}!getLengthOfChapters@{getLengthOfChapters}}
+\index{getLengthOfChapters@{getLengthOfChapters}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{getLengthOfChapters()}{getLengthOfChapters()}}
+{\footnotesize\ttfamily unsigned int$\ast$ Film\+::get\+Length\+Of\+Chapters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the lengths of the chapters in the film.
+
+\begin{DoxyReturn}{Returns}
+A pointer to an array containing the lengths of the chapters. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilm_a829b137c16e276ad9f6753fdf38cfbdb}\label{classFilm_a829b137c16e276ad9f6753fdf38cfbdb}} 
+\index{Film@{Film}!getNbChapter@{getNbChapter}}
+\index{getNbChapter@{getNbChapter}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{getNbChapter()}{getNbChapter()}}
+{\footnotesize\ttfamily double Film\+::get\+Nb\+Chapter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the number of chapters in the film.
+
+\begin{DoxyReturn}{Returns}
+The number of chapters. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilm_a8f411127364bee4eccd01a4de73ba9a0}\label{classFilm_a8f411127364bee4eccd01a4de73ba9a0}} 
+\index{Film@{Film}!play@{play}}
+\index{play@{play}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Film\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Plays the film using an external player.
+
+Utilizes the \textquotesingle{}mpv\textquotesingle{} player to play the film. This method builds the command and executes it using the system call. 
+
+Implements \mbox{\hyperlink{classMultimedia_ad08d517e03460d941915682e8d0a13be}{Multimedia}}.
+
+\mbox{\Hypertarget{classFilm_a4e8e856c22fedf76a3b9fdb7ebe994a6}\label{classFilm_a4e8e856c22fedf76a3b9fdb7ebe994a6}} 
+\index{Film@{Film}!setLengthOfChapters@{setLengthOfChapters}}
+\index{setLengthOfChapters@{setLengthOfChapters}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{setLengthOfChapters()}{setLengthOfChapters()}}
+{\footnotesize\ttfamily void Film\+::set\+Length\+Of\+Chapters (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{length\+Of\+Chapters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the lengths of the chapters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em length\+Of\+Chapters} & A pointer to an array containing the lengths of the chapters. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFilm_aecd2032cf554c6cfaf0b6b562805f27d}\label{classFilm_aecd2032cf554c6cfaf0b6b562805f27d}} 
+\index{Film@{Film}!setNbChapter@{setNbChapter}}
+\index{setNbChapter@{setNbChapter}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{setNbChapter()}{setNbChapter()}}
+{\footnotesize\ttfamily void Film\+::set\+Nb\+Chapter (\begin{DoxyParamCaption}\item[{unsigned int}]{nb\+Chapter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the number of chapters in the film.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+Chapter} & The number of chapters to set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Film.\+h\end{DoxyCompactItemize}

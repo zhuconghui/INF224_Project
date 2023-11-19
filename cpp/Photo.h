@@ -8,16 +8,15 @@ using namespace std;
 
 /**
  * @class Photo
- * @brief A class representing a photo, extending the Multimedia class.
- *
- * This class adds geographical information (latitude and longitude) to the basic
- * multimedia structure. It provides functionalities to set and get these geographic
- * coordinates and to display and open the photo.
+ * @brief A class representing a photo, derived from Multimedia.
+ * 
+ * The Photo class extends the Multimedia class, providing additional
+ * functionality specific to photos, such as geographic location coordinates.
  */
 class Photo : public Multimedia {
    private:
-    double latitude;   ///< Latitude coordinate of the photo.
-    double longitude;  ///< Longitude coordinate of the photo.
+    double latitude{};  ///< Latitude of the photo's location
+    double longitude{}; ///< Longitude of the photo's location
 
    public:
     /**
@@ -26,61 +25,78 @@ class Photo : public Multimedia {
     Photo(){};
 
     /**
-     * Parameterized constructor for Photo.
+     * Parametrized constructor for Photo.
      * 
      * @param name The name of the photo.
      * @param fileName The file name of the photo.
-     * @param latitude The latitude coordinate of the photo.
-     * @param longitude The longitude coordinate of the photo.
+     * @param latitude The latitude of the photo's location.
+     * @param longitude The longitude of the photo's location.
      */
-    Photo(string name, string fileName, double latitude, double longitude);
+    Photo(string name, string fileName, double latitude, double longitude) {
+        this->setName(name);
+        this->setFileName(fileName);
+        this->latitude = latitude;
+        this->longitude = longitude;
+    };
 
     /**
      * Destructor for Photo.
-     * Outputs a message upon destruction of the object.
-     */
-    ~Photo() override;
-
-    /**
-     * Sets the latitude coordinate of the photo.
      * 
-     * @param latitude The latitude coordinate to set.
+     * Outputs a message when a Photo object is destroyed.
      */
-    inline void setLatitude(double latitude);
+    ~Photo() override {
+        cout << "Photo " << this->getName() << " is destroyed" << "\n";
+    }
 
     /**
-     * Sets the longitude coordinate of the photo.
+     * Sets the latitude of the photo's location.
      * 
-     * @param longitude The longitude coordinate to set.
+     * @param latitude The latitude to be set.
      */
-    inline void setLongitude(double longitude);
+    inline void setLatitude(double latitude) { this->latitude = latitude; };
 
     /**
-     * Gets the latitude coordinate of the photo.
+     * Sets the longitude of the photo's location.
      * 
-     * @return The latitude coordinate of the photo.
+     * @param longitude The longitude to be set.
      */
-    inline double getLatitude() const;
+    inline void setLongitude(double longitude) { this->longitude = longitude; };
 
     /**
-     * Gets the longitude coordinate of the photo.
+     * Gets the latitude of the photo's location.
      * 
-     * @return The longitude coordinate of the photo.
+     * @return The latitude of the photo's location.
      */
-    inline double getLongitude() const;
+    inline double getLatitude() const { return this->latitude; };
 
     /**
-     * Displays information about the photo.
+     * Gets the longitude of the photo's location.
      * 
-     * @param s The output stream to which the information is written.
+     * @return The longitude of the photo's location.
      */
-    void displayInfo(ostream &s) const override;
+    inline double getLongitude() const { return this->longitude; };
 
     /**
-     * Opens the photo using an external application.
-     * The method builds and executes a system command to open the photo.
+     * Displays the photo information.
+     * 
+     * @param s Reference to the output stream.
      */
-    void play() const override;
+    void displayInfo(ostream &s) const override {
+        s << "Name of photo : " << this->getName() << "; ";
+        s << "Filename : " << this->getFileName() << "; ";
+        s << "Latitude = " << this->getLatitude() << "; ";
+        s << "Longitude = " << this->getLongitude() << "; ";
+    };
+
+    /**
+     * Displays the photo.
+     * 
+     * Uses system call to open the photo file with an external viewer.
+     */
+    void play() const override {
+        string str = "imagej " + this->getFileName() + " &";
+        system(str.data());
+    };
 };
 
 #endif

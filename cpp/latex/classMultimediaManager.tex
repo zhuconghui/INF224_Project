@@ -1,0 +1,166 @@
+\hypertarget{classMultimediaManager}{}\doxysection{Multimedia\+Manager Class Reference}
+\label{classMultimediaManager}\index{MultimediaManager@{MultimediaManager}}
+
+
+Manages multimedia objects and groups.  
+
+
+
+
+{\ttfamily \#include $<$Multimedia\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classPhoto}{Photo}} $>$ \mbox{\hyperlink{classMultimediaManager_a8103e949b5b438e56baa7f40e1b0ef3e}{create\+Photo}} (string name, string file\+Name, double latitude, double longitude)
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classVideo}{Video}} $>$ \mbox{\hyperlink{classMultimediaManager_a69536c44ecd4b4d0d14346a686d0da5a}{create\+Video}} (string name, string file\+Name, unsigned int length)
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classFilm}{Film}} $>$ \mbox{\hyperlink{classMultimediaManager_a2972550f2f6b41ebbd8f87f83d6b33b3}{create\+Film}} (string name, string file\+Name, unsigned int length, unsigned int nb\+Chapter, unsigned int $\ast$length\+Of\+Chapters)
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classGroupMultimedia}{Group\+Multimedia}} $>$ \mbox{\hyperlink{classMultimediaManager_adeb4d69b043d713c6579b327dfc941bd}{create\+Group\+Multimedia}} (string group\+Name)
+\item 
+void \mbox{\hyperlink{classMultimediaManager_a1ef9baa67325c4c430b7a844169b37a3}{display\+Multimedia}} (string name, ostream \&s)
+\item 
+void \mbox{\hyperlink{classMultimediaManager_ac4ce2715c6a981c10490f4754251ec5c}{display\+Group\+Multimedia}} (string name, ostream \&s)
+\item 
+void \mbox{\hyperlink{classMultimediaManager_a12236807ff9799c2600878d715eff499}{play\+Multimedia}} (string name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages multimedia objects and groups. 
+
+This class is responsible for creating, storing, and managing various multimedia objects (like Photos, Videos, and Films) and groups of multimedia objects. It uses std\+::map to associate names with multimedia objects and groups for easy retrieval. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMultimediaManager_a2972550f2f6b41ebbd8f87f83d6b33b3}\label{classMultimediaManager_a2972550f2f6b41ebbd8f87f83d6b33b3}} 
+\index{MultimediaManager@{MultimediaManager}!createFilm@{createFilm}}
+\index{createFilm@{createFilm}!MultimediaManager@{MultimediaManager}}
+\doxysubsubsection{\texorpdfstring{createFilm()}{createFilm()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classFilm}{Film}}$>$ Multimedia\+Manager\+::create\+Film (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{file\+Name,  }\item[{unsigned int}]{length,  }\item[{unsigned int}]{nb\+Chapter,  }\item[{unsigned int $\ast$}]{length\+Of\+Chapters }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{classFilm}{Film}} object and stores it in the multimedia dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the film. \\
+\hline
+{\em file\+Name} & The file name of the film. \\
+\hline
+{\em length} & The total length of the film. \\
+\hline
+{\em nb\+Chapter} & The number of chapters in the film. \\
+\hline
+{\em length\+Of\+Chapters} & A pointer to an array containing the length of each chapter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared\+\_\+ptr to the created \mbox{\hyperlink{classFilm}{Film}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMultimediaManager_adeb4d69b043d713c6579b327dfc941bd}\label{classMultimediaManager_adeb4d69b043d713c6579b327dfc941bd}} 
+\index{MultimediaManager@{MultimediaManager}!createGroupMultimedia@{createGroupMultimedia}}
+\index{createGroupMultimedia@{createGroupMultimedia}!MultimediaManager@{MultimediaManager}}
+\doxysubsubsection{\texorpdfstring{createGroupMultimedia()}{createGroupMultimedia()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classGroupMultimedia}{Group\+Multimedia}}$>$ Multimedia\+Manager\+::create\+Group\+Multimedia (\begin{DoxyParamCaption}\item[{string}]{group\+Name }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{classGroupMultimedia}{Group\+Multimedia}} object and stores it in the group multimedia dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Name} & The name of the multimedia group. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared\+\_\+ptr to the created \mbox{\hyperlink{classGroupMultimedia}{Group\+Multimedia}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMultimediaManager_a8103e949b5b438e56baa7f40e1b0ef3e}\label{classMultimediaManager_a8103e949b5b438e56baa7f40e1b0ef3e}} 
+\index{MultimediaManager@{MultimediaManager}!createPhoto@{createPhoto}}
+\index{createPhoto@{createPhoto}!MultimediaManager@{MultimediaManager}}
+\doxysubsubsection{\texorpdfstring{createPhoto()}{createPhoto()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classPhoto}{Photo}}$>$ Multimedia\+Manager\+::create\+Photo (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{file\+Name,  }\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{classPhoto}{Photo}} object and stores it in the multimedia dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the photo. \\
+\hline
+{\em file\+Name} & The file name of the photo. \\
+\hline
+{\em latitude} & The latitude coordinate of the photo. \\
+\hline
+{\em longitude} & The longitude coordinate of the photo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared\+\_\+ptr to the created \mbox{\hyperlink{classPhoto}{Photo}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMultimediaManager_a69536c44ecd4b4d0d14346a686d0da5a}\label{classMultimediaManager_a69536c44ecd4b4d0d14346a686d0da5a}} 
+\index{MultimediaManager@{MultimediaManager}!createVideo@{createVideo}}
+\index{createVideo@{createVideo}!MultimediaManager@{MultimediaManager}}
+\doxysubsubsection{\texorpdfstring{createVideo()}{createVideo()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classVideo}{Video}}$>$ Multimedia\+Manager\+::create\+Video (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{file\+Name,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{classVideo}{Video}} object and stores it in the multimedia dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the video. \\
+\hline
+{\em file\+Name} & The file name of the video. \\
+\hline
+{\em length} & The length of the video. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared\+\_\+ptr to the created \mbox{\hyperlink{classVideo}{Video}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMultimediaManager_ac4ce2715c6a981c10490f4754251ec5c}\label{classMultimediaManager_ac4ce2715c6a981c10490f4754251ec5c}} 
+\index{MultimediaManager@{MultimediaManager}!displayGroupMultimedia@{displayGroupMultimedia}}
+\index{displayGroupMultimedia@{displayGroupMultimedia}!MultimediaManager@{MultimediaManager}}
+\doxysubsubsection{\texorpdfstring{displayGroupMultimedia()}{displayGroupMultimedia()}}
+{\footnotesize\ttfamily void Multimedia\+Manager\+::display\+Group\+Multimedia (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{ostream \&}]{s }\end{DoxyParamCaption})}
+
+Displays information about all multimedia objects in a group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the multimedia group. \\
+\hline
+{\em s} & The output stream to which the information is written. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMultimediaManager_a1ef9baa67325c4c430b7a844169b37a3}\label{classMultimediaManager_a1ef9baa67325c4c430b7a844169b37a3}} 
+\index{MultimediaManager@{MultimediaManager}!displayMultimedia@{displayMultimedia}}
+\index{displayMultimedia@{displayMultimedia}!MultimediaManager@{MultimediaManager}}
+\doxysubsubsection{\texorpdfstring{displayMultimedia()}{displayMultimedia()}}
+{\footnotesize\ttfamily void Multimedia\+Manager\+::display\+Multimedia (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{ostream \&}]{s }\end{DoxyParamCaption})}
+
+Displays information about a multimedia object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the multimedia object. \\
+\hline
+{\em s} & The output stream to which the information is written. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMultimediaManager_a12236807ff9799c2600878d715eff499}\label{classMultimediaManager_a12236807ff9799c2600878d715eff499}} 
+\index{MultimediaManager@{MultimediaManager}!playMultimedia@{playMultimedia}}
+\index{playMultimedia@{playMultimedia}!MultimediaManager@{MultimediaManager}}
+\doxysubsubsection{\texorpdfstring{playMultimedia()}{playMultimedia()}}
+{\footnotesize\ttfamily void Multimedia\+Manager\+::play\+Multimedia (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Plays a multimedia object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the multimedia object to play. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Multimedia\+Manager.\+h\end{DoxyCompactItemize}

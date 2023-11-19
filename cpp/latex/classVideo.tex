@@ -1,0 +1,144 @@
+\hypertarget{classVideo}{}\doxysection{Video Class Reference}
+\label{classVideo}\index{Video@{Video}}
+
+
+A class representing a video, extending the \mbox{\hyperlink{classMultimedia}{Multimedia}} class.  
+
+
+
+
+{\ttfamily \#include $<$Video.\+h$>$}
+
+
+
+Inheritance diagram for Video\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classVideo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Video\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classVideo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVideo_ab67336c2c5b6227a9635bc7dcd6af543}{Video}} ()
+\item 
+\mbox{\hyperlink{classVideo_ad74a71be7044fb8f13f27b394ec5bbe0}{Video}} (string name, string file\+Name, unsigned int length)
+\item 
+\mbox{\hyperlink{classVideo_a3dab275f0fa395bdeaaeb42b83d689c1}{$\sim$\+Video}} () override
+\item 
+void \mbox{\hyperlink{classVideo_a83536b4fa081c9d332a043b24c94f958}{set\+Length}} (unsigned int length)
+\item 
+double \mbox{\hyperlink{classVideo_af309af8f29f68b922329a8ed42ee516f}{get\+Length}} () const
+\item 
+void \mbox{\hyperlink{classVideo_ad9a6e94a9e7e59eaa76c68250eb1079b}{display\+Info}} (ostream \&s) const override
+\item 
+void \mbox{\hyperlink{classVideo_a89e11497f4f200f387805b10bd42922d}{play}} () const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a video, extending the \mbox{\hyperlink{classMultimedia}{Multimedia}} class. 
+
+This class adds an attribute to store the length of a video. It includes methods to set and get this length, display video information, and play the video using an external application. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVideo_ab67336c2c5b6227a9635bc7dcd6af543}\label{classVideo_ab67336c2c5b6227a9635bc7dcd6af543}} 
+\index{Video@{Video}!Video@{Video}}
+\index{Video@{Video}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{Video()}{Video()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Video\+::\+Video (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor for \mbox{\hyperlink{classVideo}{Video}}. \mbox{\Hypertarget{classVideo_ad74a71be7044fb8f13f27b394ec5bbe0}\label{classVideo_ad74a71be7044fb8f13f27b394ec5bbe0}} 
+\index{Video@{Video}!Video@{Video}}
+\index{Video@{Video}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{Video()}{Video()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Video\+::\+Video (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{file\+Name,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})}
+
+Parameterized constructor for \mbox{\hyperlink{classVideo}{Video}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the video. \\
+\hline
+{\em file\+Name} & The file name of the video. \\
+\hline
+{\em length} & The length of the video in seconds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVideo_a3dab275f0fa395bdeaaeb42b83d689c1}\label{classVideo_a3dab275f0fa395bdeaaeb42b83d689c1}} 
+\index{Video@{Video}!````~Video@{$\sim$Video}}
+\index{````~Video@{$\sim$Video}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{$\sim$Video()}{~Video()}}
+{\footnotesize\ttfamily Video\+::$\sim$\+Video (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Destructor for \mbox{\hyperlink{classVideo}{Video}}. Outputs a message upon destruction of the object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVideo_ad9a6e94a9e7e59eaa76c68250eb1079b}\label{classVideo_ad9a6e94a9e7e59eaa76c68250eb1079b}} 
+\index{Video@{Video}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily void Video\+::display\+Info (\begin{DoxyParamCaption}\item[{ostream \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Displays information about the video.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The output stream to which the information is written. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMultimedia_a2971d926f1d7e13f4e04798987b26cf6}{Multimedia}}.
+
+\mbox{\Hypertarget{classVideo_af309af8f29f68b922329a8ed42ee516f}\label{classVideo_af309af8f29f68b922329a8ed42ee516f}} 
+\index{Video@{Video}!getLength@{getLength}}
+\index{getLength@{getLength}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily double Video\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the length of the video.
+
+\begin{DoxyReturn}{Returns}
+The length of the video in seconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVideo_a89e11497f4f200f387805b10bd42922d}\label{classVideo_a89e11497f4f200f387805b10bd42922d}} 
+\index{Video@{Video}!play@{play}}
+\index{play@{play}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Video\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Plays the video using an external application. The method builds and executes a system command to play the video. 
+
+Implements \mbox{\hyperlink{classMultimedia_ad08d517e03460d941915682e8d0a13be}{Multimedia}}.
+
+\mbox{\Hypertarget{classVideo_a83536b4fa081c9d332a043b24c94f958}\label{classVideo_a83536b4fa081c9d332a043b24c94f958}} 
+\index{Video@{Video}!setLength@{setLength}}
+\index{setLength@{setLength}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{setLength()}{setLength()}}
+{\footnotesize\ttfamily void Video\+::set\+Length (\begin{DoxyParamCaption}\item[{unsigned int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the length of the video.
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The length of the video in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Video.\+h\end{DoxyCompactItemize}

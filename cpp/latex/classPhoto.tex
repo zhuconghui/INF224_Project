@@ -1,0 +1,174 @@
+\hypertarget{classPhoto}{}\doxysection{Photo Class Reference}
+\label{classPhoto}\index{Photo@{Photo}}
+
+
+A class representing a photo, extending the \mbox{\hyperlink{classMultimedia}{Multimedia}} class.  
+
+
+
+
+{\ttfamily \#include $<$Photo.\+h$>$}
+
+
+
+Inheritance diagram for Photo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classPhoto__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Photo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classPhoto__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPhoto_a10ef03ede9235052eb9f7d5e950f85d3}{Photo}} ()
+\item 
+\mbox{\hyperlink{classPhoto_a5b57857190b784f3fa9c5c7ee50dc978}{Photo}} (string name, string file\+Name, double latitude, double longitude)
+\item 
+\mbox{\hyperlink{classPhoto_aa9fcb04e09aa2871abd73bc2088d5dfd}{$\sim$\+Photo}} () override
+\item 
+void \mbox{\hyperlink{classPhoto_a94319fce6b17eef205d25a15b44f3439}{set\+Latitude}} (double latitude)
+\item 
+void \mbox{\hyperlink{classPhoto_a110586b178177c87da549b6de6d85fb5}{set\+Longitude}} (double longitude)
+\item 
+double \mbox{\hyperlink{classPhoto_abf3e0bbc8dbe20b79aab846eedfee74d}{get\+Latitude}} () const
+\item 
+double \mbox{\hyperlink{classPhoto_af784f282da3cfab4a5e4c45b4da3b3f8}{get\+Longitude}} () const
+\item 
+void \mbox{\hyperlink{classPhoto_ab38be808d468a186376e0b23e6be4d90}{display\+Info}} (ostream \&s) const override
+\item 
+void \mbox{\hyperlink{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}{play}} () const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a photo, extending the \mbox{\hyperlink{classMultimedia}{Multimedia}} class. 
+
+This class adds geographical information (latitude and longitude) to the basic multimedia structure. It provides functionalities to set and get these geographic coordinates and to display and open the photo. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPhoto_a10ef03ede9235052eb9f7d5e950f85d3}\label{classPhoto_a10ef03ede9235052eb9f7d5e950f85d3}} 
+\index{Photo@{Photo}!Photo@{Photo}}
+\index{Photo@{Photo}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{Photo()}{Photo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Photo\+::\+Photo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor for \mbox{\hyperlink{classPhoto}{Photo}}. \mbox{\Hypertarget{classPhoto_a5b57857190b784f3fa9c5c7ee50dc978}\label{classPhoto_a5b57857190b784f3fa9c5c7ee50dc978}} 
+\index{Photo@{Photo}!Photo@{Photo}}
+\index{Photo@{Photo}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{Photo()}{Photo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Photo\+::\+Photo (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{file\+Name,  }\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})}
+
+Parameterized constructor for \mbox{\hyperlink{classPhoto}{Photo}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the photo. \\
+\hline
+{\em file\+Name} & The file name of the photo. \\
+\hline
+{\em latitude} & The latitude coordinate of the photo. \\
+\hline
+{\em longitude} & The longitude coordinate of the photo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPhoto_aa9fcb04e09aa2871abd73bc2088d5dfd}\label{classPhoto_aa9fcb04e09aa2871abd73bc2088d5dfd}} 
+\index{Photo@{Photo}!````~Photo@{$\sim$Photo}}
+\index{````~Photo@{$\sim$Photo}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{$\sim$Photo()}{~Photo()}}
+{\footnotesize\ttfamily Photo\+::$\sim$\+Photo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Destructor for \mbox{\hyperlink{classPhoto}{Photo}}. Outputs a message upon destruction of the object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPhoto_ab38be808d468a186376e0b23e6be4d90}\label{classPhoto_ab38be808d468a186376e0b23e6be4d90}} 
+\index{Photo@{Photo}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily void Photo\+::display\+Info (\begin{DoxyParamCaption}\item[{ostream \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Displays information about the photo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The output stream to which the information is written. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classMultimedia_a2971d926f1d7e13f4e04798987b26cf6}{Multimedia}}.
+
+\mbox{\Hypertarget{classPhoto_abf3e0bbc8dbe20b79aab846eedfee74d}\label{classPhoto_abf3e0bbc8dbe20b79aab846eedfee74d}} 
+\index{Photo@{Photo}!getLatitude@{getLatitude}}
+\index{getLatitude@{getLatitude}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{getLatitude()}{getLatitude()}}
+{\footnotesize\ttfamily double Photo\+::get\+Latitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the latitude coordinate of the photo.
+
+\begin{DoxyReturn}{Returns}
+The latitude coordinate of the photo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPhoto_af784f282da3cfab4a5e4c45b4da3b3f8}\label{classPhoto_af784f282da3cfab4a5e4c45b4da3b3f8}} 
+\index{Photo@{Photo}!getLongitude@{getLongitude}}
+\index{getLongitude@{getLongitude}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{getLongitude()}{getLongitude()}}
+{\footnotesize\ttfamily double Photo\+::get\+Longitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the longitude coordinate of the photo.
+
+\begin{DoxyReturn}{Returns}
+The longitude coordinate of the photo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}\label{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}} 
+\index{Photo@{Photo}!play@{play}}
+\index{play@{play}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Photo\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Opens the photo using an external application. The method builds and executes a system command to open the photo. 
+
+Implements \mbox{\hyperlink{classMultimedia_ad08d517e03460d941915682e8d0a13be}{Multimedia}}.
+
+\mbox{\Hypertarget{classPhoto_a94319fce6b17eef205d25a15b44f3439}\label{classPhoto_a94319fce6b17eef205d25a15b44f3439}} 
+\index{Photo@{Photo}!setLatitude@{setLatitude}}
+\index{setLatitude@{setLatitude}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{setLatitude()}{setLatitude()}}
+{\footnotesize\ttfamily void Photo\+::set\+Latitude (\begin{DoxyParamCaption}\item[{double}]{latitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the latitude coordinate of the photo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em latitude} & The latitude coordinate to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPhoto_a110586b178177c87da549b6de6d85fb5}\label{classPhoto_a110586b178177c87da549b6de6d85fb5}} 
+\index{Photo@{Photo}!setLongitude@{setLongitude}}
+\index{setLongitude@{setLongitude}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{setLongitude()}{setLongitude()}}
+{\footnotesize\ttfamily void Photo\+::set\+Longitude (\begin{DoxyParamCaption}\item[{double}]{longitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the longitude coordinate of the photo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em longitude} & The longitude coordinate to set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Photo.\+h\end{DoxyCompactItemize}

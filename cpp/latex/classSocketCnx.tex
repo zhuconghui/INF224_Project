@@ -1,0 +1,49 @@
+\hypertarget{classSocketCnx}{}\doxysection{Socket\+Cnx Class Reference}
+\label{classSocketCnx}\index{SocketCnx@{SocketCnx}}
+
+
+Connection with a given client. Each \mbox{\hyperlink{classSocketCnx}{Socket\+Cnx}} uses a different thread.  
+
+
+
+
+Collaboration diagram for Socket\+Cnx\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classSocketCnx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSocketCnx_acd004e809a99928860ffa94cbde99ae1}\label{classSocketCnx_acd004e809a99928860ffa94cbde99ae1}} 
+{\bfseries Socket\+Cnx} (\mbox{\hyperlink{classTCPServer}{TCPServer}} \&, \mbox{\hyperlink{classSocket}{Socket}} $\ast$)
+\item 
+\mbox{\Hypertarget{classSocketCnx_aa2ad22fb4fe4b78b3a9337e09475f10e}\label{classSocketCnx_aa2ad22fb4fe4b78b3a9337e09475f10e}} 
+void {\bfseries process\+Requests} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSocketCnx_ad46b42915ee50072a0307f0116403587}\label{classSocketCnx_ad46b42915ee50072a0307f0116403587}} 
+\mbox{\hyperlink{classTCPServer}{TCPServer}} \& {\bfseries server\+\_\+}
+\item 
+\mbox{\Hypertarget{classSocketCnx_a51d23b906608701ef811a7d73f0de43e}\label{classSocketCnx_a51d23b906608701ef811a7d73f0de43e}} 
+\mbox{\hyperlink{classSocket}{Socket}} $\ast$ {\bfseries sock\+\_\+}
+\item 
+\mbox{\Hypertarget{classSocketCnx_af5f1e7aef17b14deb89f65d8c89eb619}\label{classSocketCnx_af5f1e7aef17b14deb89f65d8c89eb619}} 
+\mbox{\hyperlink{classSocketBuffer}{Socket\+Buffer}} $\ast$ {\bfseries sockbuf\+\_\+}
+\item 
+\mbox{\Hypertarget{classSocketCnx_a0b358d64acd070e4f54123bd7a011183}\label{classSocketCnx_a0b358d64acd070e4f54123bd7a011183}} 
+std\+::thread {\bfseries thread\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Connection with a given client. Each \mbox{\hyperlink{classSocketCnx}{Socket\+Cnx}} uses a different thread. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tcpserver.\+cpp\end{DoxyCompactItemize}

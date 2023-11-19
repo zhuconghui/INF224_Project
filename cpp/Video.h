@@ -8,63 +8,77 @@ using namespace std;
 
 /**
  * @class Video
- * @brief A class representing a video, extending the Multimedia class.
- *
- * This class adds an attribute to store the length of a video. It includes
- * methods to set and get this length, display video information, and play
- * the video using an external application.
+ * @brief A class representing a video, derived from Multimedia.
+ * 
+ * The Video class extends the Multimedia class, providing additional
+ * functionality specific to videos, such as length in seconds.
  */
 class Video : public Multimedia {
    private:
-    unsigned int length;  ///< Length of the video in seconds.
+    unsigned int length{}; ///< Length of the video in seconds
 
    public:
     /**
      * Default constructor for Video.
      */
-    Video(){};
+    Video() {};
 
     /**
-     * Parameterized constructor for Video.
+     * Parametrized constructor for Video.
      * 
      * @param name The name of the video.
      * @param fileName The file name of the video.
      * @param length The length of the video in seconds.
      */
-    Video(string name, string fileName, unsigned int length);
+    Video(string name, string fileName, unsigned int length) {
+        this->setName(name);
+        this->setFileName(fileName);
+        this->length = length;
+    };
 
     /**
      * Destructor for Video.
-     * Outputs a message upon destruction of the object.
+     * 
+     * Outputs a message when a Video object is destroyed.
      */
-    ~Video() override;
+    ~Video() override {
+        cout << "Video " << this->getName() << " is destroyed" << "\n";
+    }
 
     /**
      * Sets the length of the video.
      * 
      * @param length The length of the video in seconds.
      */
-    inline void setLength(unsigned int length);
+    inline void setLength(unsigned int length) { this->length = length; };
 
     /**
      * Gets the length of the video.
      * 
      * @return The length of the video in seconds.
      */
-    inline double getLength() const;
+    inline double getLength() const { return this->length; };
 
     /**
-     * Displays information about the video.
+     * Displays the video information.
      * 
-     * @param s The output stream to which the information is written.
+     * @param s Reference to the output stream.
      */
-    void displayInfo(ostream &s) const override;
+    void displayInfo(ostream &s) const override {
+        s << "Name of video : " << this->getName() << "; ";
+        s << "Filename : " << this->getFileName() << "; ";
+        s << "Length = " << this->getLength() << "; ";
+    };
 
     /**
-     * Plays the video using an external application.
-     * The method builds and executes a system command to play the video.
+     * Plays the video.
+     * 
+     * Uses system call to open the video file with an external player.
      */
-    void play() const override;
+    void play() const override {
+        string str = "mpv " + this->getFileName() + " &";
+        system(str.data());
+    };
 };
 
 #endif

@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classMultimedia.html" title="Base class for multimedia content." alt="" coords="5,31,101,57"/>
+<area shape="rect" id="node2" href="$classPhoto.html" title="A class representing a photo, extending the Multimedia class." alt="" coords="149,5,208,32"/>
+<area shape="rect" id="node3" href="$classVideo.html" title="A class representing a video, extending the Multimedia class." alt="" coords="149,56,208,83"/>
+<area shape="rect" id="node4" href="$classFilm.html" title="The Film class extends the Video class with specific attributes for films." alt="" coords="256,56,307,83"/>
+</map>

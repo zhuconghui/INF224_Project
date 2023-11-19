@@ -150,9 +150,13 @@ int main() {
     MultimediaManager *manager = new MultimediaManager();
     shared_ptr<Multimedia> photo(manager->createPhoto("C++_Logo", "test_files/C++_Logo.png", 20, 15));
     shared_ptr<Multimedia> video(manager->createVideo("test_video", "test_files/test_video.mp4", 50));
+    unsigned int *lengthOfChapters = new unsigned int[5]{1, 2, 3, 4, 5};
+    shared_ptr<Multimedia> film(manager->createFilm("test_film", "test_files/test_film.mp4",
+                                   50, 5, lengthOfChapters));
     shared_ptr<GroupMultimedia> groupMultimedia(manager->createGroupMultimedia("groupMultimedia"));
     groupMultimedia->push_back(photo);
     groupMultimedia->push_back(video);
+    groupMultimedia->push_back(film);
 
     // groupMultimedia->displayAllObjects(cout);
     auto* server = new TCPServer([&](string const& request, string& response) {

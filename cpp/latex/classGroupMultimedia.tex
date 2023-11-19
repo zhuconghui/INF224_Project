@@ -1,0 +1,126 @@
+\hypertarget{classGroupMultimedia}{}\doxysection{Group\+Multimedia Class Reference}
+\label{classGroupMultimedia}\index{GroupMultimedia@{GroupMultimedia}}
+
+
+This class represents a group of multimedia objects.  
+
+
+
+
+{\ttfamily \#include $<$Group\+Multimedia.\+h$>$}
+
+
+
+Inheritance diagram for Group\+Multimedia\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classGroupMultimedia__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Group\+Multimedia\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classGroupMultimedia__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGroupMultimedia_a4ddbc5ad16339a63bac54e33a3e9404d}{Group\+Multimedia}} ()
+\item 
+\mbox{\hyperlink{classGroupMultimedia_ad66ae202871ab8fa2b933614ba47f022}{Group\+Multimedia}} (string group\+Name)
+\item 
+\mbox{\hyperlink{classGroupMultimedia_a09027705be9db96ca1468ad3aa225bb3}{$\sim$\+Group\+Multimedia}} ()
+\item 
+string \mbox{\hyperlink{classGroupMultimedia_ad98fb28e453a959e69fbe4c914fc5990}{get\+Group\+Name}} () const
+\item 
+void \mbox{\hyperlink{classGroupMultimedia_a845f4bdbcca0c7c25acd241743917b77}{set\+Group\+Name}} (string group\+Name)
+\item 
+void \mbox{\hyperlink{classGroupMultimedia_a03e300c6a1d056be9b0e663144e88536}{display\+All\+Objects}} (ostream \&s) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a group of multimedia objects. 
+
+\mbox{\hyperlink{classGroupMultimedia}{Group\+Multimedia}} extends the standard list class to hold a collection of multimedia objects. Each multimedia object is managed through shared\+\_\+ptr, facilitating automatic memory management. The class provides functionalities to set and get the group\textquotesingle{}s name and to display information about all objects in the group. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGroupMultimedia_a4ddbc5ad16339a63bac54e33a3e9404d}\label{classGroupMultimedia_a4ddbc5ad16339a63bac54e33a3e9404d}} 
+\index{GroupMultimedia@{GroupMultimedia}!GroupMultimedia@{GroupMultimedia}}
+\index{GroupMultimedia@{GroupMultimedia}!GroupMultimedia@{GroupMultimedia}}
+\doxysubsubsection{\texorpdfstring{GroupMultimedia()}{GroupMultimedia()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Group\+Multimedia\+::\+Group\+Multimedia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor for \mbox{\hyperlink{classGroupMultimedia}{Group\+Multimedia}}. \mbox{\Hypertarget{classGroupMultimedia_ad66ae202871ab8fa2b933614ba47f022}\label{classGroupMultimedia_ad66ae202871ab8fa2b933614ba47f022}} 
+\index{GroupMultimedia@{GroupMultimedia}!GroupMultimedia@{GroupMultimedia}}
+\index{GroupMultimedia@{GroupMultimedia}!GroupMultimedia@{GroupMultimedia}}
+\doxysubsubsection{\texorpdfstring{GroupMultimedia()}{GroupMultimedia()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Group\+Multimedia\+::\+Group\+Multimedia (\begin{DoxyParamCaption}\item[{string}]{group\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Parameterized constructor for \mbox{\hyperlink{classGroupMultimedia}{Group\+Multimedia}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Name} & The name of the multimedia group. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupMultimedia_a09027705be9db96ca1468ad3aa225bb3}\label{classGroupMultimedia_a09027705be9db96ca1468ad3aa225bb3}} 
+\index{GroupMultimedia@{GroupMultimedia}!````~GroupMultimedia@{$\sim$GroupMultimedia}}
+\index{````~GroupMultimedia@{$\sim$GroupMultimedia}!GroupMultimedia@{GroupMultimedia}}
+\doxysubsubsection{\texorpdfstring{$\sim$GroupMultimedia()}{~GroupMultimedia()}}
+{\footnotesize\ttfamily Group\+Multimedia\+::$\sim$\+Group\+Multimedia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor for \mbox{\hyperlink{classGroupMultimedia}{Group\+Multimedia}}.
+
+Outputs a message upon destruction of the object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGroupMultimedia_a03e300c6a1d056be9b0e663144e88536}\label{classGroupMultimedia_a03e300c6a1d056be9b0e663144e88536}} 
+\index{GroupMultimedia@{GroupMultimedia}!displayAllObjects@{displayAllObjects}}
+\index{displayAllObjects@{displayAllObjects}!GroupMultimedia@{GroupMultimedia}}
+\doxysubsubsection{\texorpdfstring{displayAllObjects()}{displayAllObjects()}}
+{\footnotesize\ttfamily void Group\+Multimedia\+::display\+All\+Objects (\begin{DoxyParamCaption}\item[{ostream \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Displays information about all multimedia objects in the group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The output stream to which the information is written. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupMultimedia_ad98fb28e453a959e69fbe4c914fc5990}\label{classGroupMultimedia_ad98fb28e453a959e69fbe4c914fc5990}} 
+\index{GroupMultimedia@{GroupMultimedia}!getGroupName@{getGroupName}}
+\index{getGroupName@{getGroupName}!GroupMultimedia@{GroupMultimedia}}
+\doxysubsubsection{\texorpdfstring{getGroupName()}{getGroupName()}}
+{\footnotesize\ttfamily string Group\+Multimedia\+::get\+Group\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the name of the multimedia group.
+
+\begin{DoxyReturn}{Returns}
+The name of the group. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGroupMultimedia_a845f4bdbcca0c7c25acd241743917b77}\label{classGroupMultimedia_a845f4bdbcca0c7c25acd241743917b77}} 
+\index{GroupMultimedia@{GroupMultimedia}!setGroupName@{setGroupName}}
+\index{setGroupName@{setGroupName}!GroupMultimedia@{GroupMultimedia}}
+\doxysubsubsection{\texorpdfstring{setGroupName()}{setGroupName()}}
+{\footnotesize\ttfamily void Group\+Multimedia\+::set\+Group\+Name (\begin{DoxyParamCaption}\item[{string}]{group\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the name of the multimedia group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Name} & The name to set for the group. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Group\+Multimedia.\+h\end{DoxyCompactItemize}

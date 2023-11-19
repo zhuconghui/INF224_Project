@@ -1,0 +1,7 @@
+<map id="SocketCnx" name="SocketCnx">
+<area shape="rect" id="node1" title="Connection with a given client. Each SocketCnx uses a different thread." alt="" coords="103,184,194,211"/>
+<area shape="rect" id="node2" href="$classSocket.html" title=" " alt="" coords="5,5,71,32"/>
+<area shape="rect" id="node4" href="$classSocketBuffer.html" title=" " alt="" coords="97,95,201,121"/>
+<area shape="rect" id="node3" href="$classTCPServer.html" title=" " alt="" coords="225,95,313,121"/>
+<area shape="rect" id="node5" href="$structInputBuffer.html" title=" " alt="" coords="101,5,196,32"/>
+</map>

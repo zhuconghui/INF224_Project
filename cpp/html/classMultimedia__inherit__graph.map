@@ -1,0 +1,6 @@
+<map id="Multimedia" name="Multimedia">
+<area shape="rect" id="node1" title="Base class for multimedia content." alt="" coords="28,5,124,32"/>
+<area shape="rect" id="node2" href="$classPhoto.html" title="A class representing a photo, extending the Multimedia class." alt="" coords="5,80,64,107"/>
+<area shape="rect" id="node3" href="$classVideo.html" title="A class representing a video, extending the Multimedia class." alt="" coords="88,80,147,107"/>
+<area shape="rect" id="node4" href="$classFilm.html" title="The Film class extends the Video class with specific attributes for films." alt="" coords="92,155,143,181"/>
+</map>
